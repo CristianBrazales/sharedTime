@@ -37,7 +37,7 @@ function flatDownData(dataArray) {
   while (startStack.length !== 0 || endStack.length !== 0) {
     if (
       startIndex >= 0 &&
-      startStack[startIndex].value < endStack[endIndex].value
+      startStack[startIndex].value <= endStack[endIndex].value
     ) {
       linearData.push({
         name: startStack[startIndex].name,

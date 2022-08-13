@@ -26,3 +26,8 @@ test("Runs fourth test", async () => {
   var result = sameTime2(data.split(/\r?\n/));
   expect(result.sort()).toStrictEqual(["A-B: 7", "B-C: 7", "A-C: 7"].sort());
 });
+test("Runs fifth test, added border match", async () => {
+  const data = await fs.readFile("./testFiles/test5.txt", "utf8");
+  var result = sameTime2(data.split(/\r?\n/));
+  expect(result.sort()).toStrictEqual(["A-B: 7", "B-C: 8", "A-C: 8"].sort());
+});

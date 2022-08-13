@@ -15,7 +15,7 @@ function sameTime(workerSchedules = []) {
         if (
           index != index2 &&
           period.name != period2.name &&
-          period2.visited &&
+          period2.visited == false &&
           doOverlap(period, period2)
         ) {
           let key = generateKey([period.name, period2.name]);
